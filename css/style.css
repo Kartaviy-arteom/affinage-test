@@ -14,6 +14,22 @@
     url("../fonts/Philosopher-Italic.woff") format("woff");
 }
 
+@font-face {
+  font-family: "Geometria-HeavyItalic";
+  font-weight: 800px;
+  font-display: swap;
+  src: url("../fonts/Geometria-HeavyItalic.woff2") format("woff2"),
+    url("../fonts/Geometria-HeavyItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Philosopher";
+  font-weight: 400px;
+  font-display: swap;
+  src: url("../fonts/Philosopher-Regular.woff2") format("woff2"),
+    url("../fonts/Philosopher-Regular.woff") format("woff");
+}
+
 body {
   min-width: 320px;
   font-family: "Philosopher-Italic", "Arial", sans-serif;
@@ -28,6 +44,7 @@ img {
 .first-screen {
   position: relative;
   height: 100vh;
+  min-height: 568px;
   background-color: #f7e611;
   overflow: hidden;
   display: flex;
@@ -36,10 +53,12 @@ img {
 }
 
 .first-screen__logo {
+  position: relative;
   margin-left: 6.25%;
   margin-top: 4.67%;
   width: 7.18%;
   height: auto;
+  z-index: 5;
 }
 
 .first-screen__logo svg {
@@ -52,7 +71,7 @@ img {
   top: -92px;
   border: 1px solid #000;
   border-right: none;
-  min-width: 152px;
+  width: 47.7%;
   min-height: 197px;
   transform: skewY(7deg);
 }
@@ -61,7 +80,7 @@ img {
   position: absolute;
   display: block;
   top: 106px;
-  right: 20px;
+  right: 13%;
   width: 20px;
   height: 14px;
   transform: skewY(-7deg);
@@ -75,21 +94,26 @@ img {
   position: absolute;
   top: 0;
   left: 0;
-  width: 20px;
+  width: 100%;
   height: 2px;
   background-color: #000;
   box-shadow: 0 6px 0 0 #000, 0 12px 0 0 #000;
 }
 
 .first-screen__title {
-  width: 30px;
-  margin-top: 0;
-  margin-bottom: 0;
+  display: block;
+}
+
+.first-screen__tagline {
+  position: absolute;
+  top: 33vh;
+  left: 7%;
   writing-mode: vertical-lr;
   transform: rotate(180deg);
-  font-size: 9px;
+  font-size: 0.526rem;
   opacity: 0.5;
   font-weight: 400;
+  z-index: 6;
 }
 
 .first-screen__wrapper {
@@ -100,24 +124,14 @@ img {
 
 .wrapper--middle {
   position: relative;
-  margin-top: -116px;
-  padding-top: 116px;
+  margin-top: -21vh;
+  padding-top: 22vh;
   flex-wrap: wrap;
   background-image: linear-gradient(to right, rgba(247,230,17, 0.8) 50%, rgba(247,230,17, 0.8) 50%), url("../img/kaboompics-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: right 84px top 0, right 84px top 0;
+  background-position: right 130% top 0;
   z-index: 2;
-}
-
-@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-  .wrapper--middle {
-    background-image: linear-gradient(to right, rgba(247,230,17, 0.8) 50%, rgba(247,230,17, 0.8) 50%), url("../img/kaboompics-mobile@2x.jpg");
-    background-size: auto, 281px auto;
-  }
-  .first-screen__slider {
-  background: linear-gradient(135deg, rgba(247,230,17, 0.8) 60%, #F7E611 60%), url("../img/photo-bg-mobile@2x.jpg");
-  background-size: auto, 228px auto;
-  }
+  background-size: 80% auto;
 }
 
 .first-screen__letter {
@@ -126,7 +140,7 @@ img {
   font-family: "Geometria-Medium", "Arial", sans-serif;
   font-weight: 500;
   text-transform: uppercase;
-  font-size: 60px;
+  font-size: 3.75rem;
   vertical-align: baseline;
   color: transparent;
   -webkit-text-stroke: 1px #000;
@@ -140,18 +154,19 @@ img {
 }
 
 .first-screen__letter--g {
-  padding-top: 10px;
-  margin-left: 112px;
+  margin-left: auto;
 }
 
 .first-screen__letter--e {
   margin-top: -69px;
-  margin-left: 16px;
+  margin-left: 5%;
 }
 
 .wrapper--middle svg {
-  margin-right: 28px;
-  padding-top: 27px;
+  margin-right: 9%;
+  width: 7%;
+  height: auto;
+  padding-bottom: 2vh;
 }
 
 .first-screen__slider {
@@ -160,18 +175,22 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin-top: -42px;
-  background: linear-gradient(135deg, rgba(247,230,17, 0.8) 84%, #F7E611 84%), url("../img/photo-bg-mobile@1x.jpg");
+  margin-top: -27px;
+  background-color: #F7E611;
+  background-image: linear-gradient(135deg, rgba(247,230,17, 0.8) 84%, #F7E611 84%), 
+    url("../img/photo-bg-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: 0 0, right -120px top 0;
+  background-position: 0 0, right -121px top 0;
+  background-size: auto 100%;
   z-index: 2;
 }
 
 .first-screen__slider__controls {
-  margin-top: 144px;
+  margin-top: 25.5vh;
+  padding-bottom: 4.2vh;
   margin-bottom: auto;
   align-self: flex-end;
-  width: 305px;
+  width: 95%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -192,12 +211,113 @@ img {
 }
 
 .wrapper--slider svg:first-child {
-  margin-bottom: 28px;
-  margin-left: 44px;
+  box-sizing: border-box;
+  margin-bottom: 10%;
+  padding-left: 7%;
+  width: 28%;
 }
 
 .wrapper--slider svg:nth-child(2) {
-  margin-left: 37px;
-  margin-right: auto;
+  align-self: center;
   transform: translateY(50%);
+}
+
+.wrapper--slider span {
+  padding-left: 15%;
+  box-sizing: border-box;
+  padding-bottom: 7%;
+  font-family: "Geometria-HeavyItalic", "Arial", sans-serif;
+  font-size: 1.25rem;
+  letter-spacing: 0.125rem;
+  width: 28%;
+}
+
+@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .wrapper--middle {
+    background-image: linear-gradient(to right, rgba(247,230,17, 0.8) 50%, rgba(247,230,17, 0.8) 50%), url("../img/kaboompics-mobile@2x.jpg");
+  }
+  .first-screen__slider {
+    background-image: linear-gradient(135deg, rgba(247,230,17, 0.8) 84%, #F7E611 84%), url("../img/photo-bg-mobile@2x.jpg");
+  }
+}
+
+@media (min-width: 768px) {
+  .first-screen__letter {
+    font-size: 7rem;
+  }
+
+  .first-screen__tagline {
+    font-size: 2rem;
+  }
+
+  .wrapper--slider span {
+    font-size: 2.5rem;
+    letter-spacing: 0.25rem;
+  }
+
+  .main-nav {
+    border-width: 2px;
+  }
+
+  .wrapper--middle {
+    background-image: linear-gradient(to right, rgba(247,230,17, 0.8) 50%, rgba(247,230,17, 0.8) 50%), url("../img/kaboompics-tablet@1x.jpg");
+  }
+
+  .first-screen__slider {
+    background-image: linear-gradient(135deg, rgba(247,230,17, 0.8) 84%, #F7E611 84%), url("../img/photo-bg-tablet@1x.jpg");
+  }
+}
+/*  */
+
+@media (min-width: 1340px) {
+  .container {
+    margin: 0 auto;
+    width: 1300px;
+    padding: 0 20px;
+  }
+
+  .first-screen {
+    background-color: #fff;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .wrapper--top {
+    position: relative;
+    width: 100%;
+  }
+
+  .main-nav {
+    border: none;
+    width: 60px;
+    min-height: auto;
+  }
+  .first-screen__logo {
+    margin: 0;
+  }
+    
+  .first-screen__logo svg {
+    width: 34px;
+    height: 34px;
+  }
+
+  .first-screen__title {
+    display: block;
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50px) translateX(-50%);
+    font-family: "Philosopher", "Arial", sans-serif; 
+    text-transform: uppercase;
+    font-size: 140px;
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: 50.4px;
+    background-color: #f7e611;
+  }
+
+  .wrapper--middle, .first-screen__slider {
+    background: none;
+  }
 }
