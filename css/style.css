@@ -68,18 +68,18 @@ img {
 
 .main-nav {
   position: relative;
-  top: -92px;
+  top: -48%;
   border: 1px solid #000;
   border-right: none;
   width: 47.7%;
-  min-height: 197px;
+  min-height: 100%;
   transform: skewY(7deg);
 }
 
 .main-nav__toggle {
   position: absolute;
   display: block;
-  top: 106px;
+  top: 54%;
   right: 13%;
   width: 20px;
   height: 14px;
@@ -101,13 +101,13 @@ img {
 }
 
 .first-screen__title {
-  display: block;
+  display: none;
 }
 
 .first-screen__tagline {
   position: absolute;
-  top: 33vh;
-  left: 7%;
+  top: 35%;
+  left: 4%;
   writing-mode: vertical-lr;
   transform: rotate(180deg);
   font-size: 0.526rem;
@@ -122,21 +122,26 @@ img {
   flex-direction: row;
 }
 
+.wrapper--top {
+  height: 35vh;
+}
+
 .wrapper--middle {
+  box-sizing: border-box;
   position: relative;
-  margin-top: -21vh;
+  margin-top: -20vh;
   padding-top: 22vh;
+  max-height: 35vh;
   flex-wrap: wrap;
   background-image: linear-gradient(to right, rgba(247,230,17, 0.8) 50%, rgba(247,230,17, 0.8) 50%), url("../img/kaboompics-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: right 130% top 0;
+  background-position: right 27vw top 0;
   z-index: 2;
-  background-size: 80% auto;
+  background-size: 87% 100%;
 }
 
 .first-screen__letter {
   box-sizing: border-box;
-  width: 55px;
   font-family: "Geometria-Medium", "Arial", sans-serif;
   font-weight: 500;
   text-transform: uppercase;
@@ -148,40 +153,43 @@ img {
 
 .first-screen__letter--a {
   position: absolute;
-  top: 225px;
-  left: 65px;
+  top: 39%;
+  left: 21%;
   z-index: 4;
 }
 
 .first-screen__letter--g {
-  margin-left: auto;
+  width: 60%;
+  padding-left: 45%;
 }
 
 .first-screen__letter--e {
-  margin-top: -69px;
-  margin-left: 5%;
+  margin-top: -14vh;
+  width: 17%;
+  padding-left: 4%;
 }
 
 .wrapper--middle svg {
-  margin-right: 9%;
   width: 7%;
   height: auto;
-  padding-bottom: 2vh;
+  padding-bottom: 4%;
+  padding-right: 9%;
 }
 
 .first-screen__slider {
   flex-grow: 1;
+  height: 56vh;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin-top: -27px;
+  margin-top: -5.5vh;
   background-color: #F7E611;
-  background-image: linear-gradient(135deg, rgba(247,230,17, 0.8) 84%, #F7E611 84%), 
+  background-image: linear-gradient(135deg, rgba(247,230,17, 0.8) 60.5%, #F7E611 60.5%), 
     url("../img/photo-bg-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: 0 0, right -121px top 0;
-  background-size: auto 100%;
+  background-position: 0 0, left -37vw top 0;
+  background-size: 175% 100%;
   z-index: 2;
 }
 
@@ -220,6 +228,8 @@ img {
 .wrapper--slider svg:nth-child(2) {
   align-self: center;
   transform: translateY(50%);
+  width: 32.25%;
+  height: auto; 
 }
 
 .wrapper--slider span {
@@ -237,7 +247,7 @@ img {
     background-image: linear-gradient(to right, rgba(247,230,17, 0.8) 50%, rgba(247,230,17, 0.8) 50%), url("../img/kaboompics-mobile@2x.jpg");
   }
   .first-screen__slider {
-    background-image: linear-gradient(135deg, rgba(247,230,17, 0.8) 84%, #F7E611 84%), url("../img/photo-bg-mobile@2x.jpg");
+    background-image: linear-gradient(135deg, rgba(247,230,17, 0.8) 60.5%, #F7E611 60.5%), url("../img/photo-bg-mobile@2x.jpg");
   }
 }
 
@@ -264,7 +274,7 @@ img {
   }
 
   .first-screen__slider {
-    background-image: linear-gradient(135deg, rgba(247,230,17, 0.8) 84%, #F7E611 84%), url("../img/photo-bg-tablet@1x.jpg");
+    background-image: linear-gradient(135deg, rgba(247,230,17, 0.8) 60.5%, #F7E611 60.5%), url("../img/photo-bg-tablet@1x.jpg");
   }
 }
 /*  */
