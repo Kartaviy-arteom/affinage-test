@@ -269,6 +269,8 @@ img {
   margin-top: 25.5vh;
   padding-bottom: 4.2vh;
   margin-bottom: auto;
+  margin-right: auto;
+  margin-left: auto;
   -ms-flex-item-align: end;
       align-self: flex-end;
   width: 95%;
@@ -356,6 +358,16 @@ img {
   }
 }
 
+@media (max-width: 767px) {
+  .btn--left {
+    padding-left: 11px;
+  }
+
+  .btn--right {
+    padding-right: 0;
+  }
+}
+
 @media (min-width: 768px) {
   .first-screen__letter {
     font-size: 7rem;
@@ -405,7 +417,7 @@ img {
     background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, rgba(247,230,17, 0.8)), color-stop(50%, rgba(247,230,17, 0.8))), url("../img/kaboompics-desktop@1x.jpg");
     background-image: -o-linear-gradient(left, rgba(247,230,17, 0.8) 50%, rgba(247,230,17, 0.8) 50%), url("../img/kaboompics-desktop@1x.jpg");
     background-image: linear-gradient(to right, rgba(247,230,17, 0.8) 50%, rgba(247,230,17, 0.8) 50%), url("../img/kaboompics-desktop@1x.jpg");
-    background-position: 80px 97px;
+    background-position: 60px 97px;
     background-size: 800px 525px;
     background-repeat: no-repeat;
     -webkit-box-shadow: 0 0 99px rgba(0, 0, 0, 0.1);
@@ -418,7 +430,7 @@ img {
     position: absolute;
     width: 800px;
     height: 525px;
-    left: 80px;
+    left: 60px;
     top: 97px;
     -webkit-box-shadow: 0 0 90px rgba(0, 0, 0, 0.1);
             box-shadow: 0 0 90px rgba(0, 0, 0, 0.1);
@@ -497,7 +509,7 @@ img {
     width: 177px;
     height: 282px;
     border: 1px solid black;
-    top: -51px;
+    top: -57px;
     left: 149px
   }
 
@@ -621,7 +633,7 @@ img {
 
   .first-screen__letter--a {
     top: 42px;
-    left: 976px;
+    left: 956px;
   }
 
   .first-screen__letter--e {
@@ -700,7 +712,7 @@ img {
     font-size: 9px;
     line-height: 10px;
     top: 438px;
-    left: 314px;
+    left: 294px;
     z-index: 11;
   }
 
@@ -891,7 +903,7 @@ img {
     display: block;
     position: absolute;
     top: 349px;
-    left: 18px;
+    left: 0;
     font-family: "Geometria-Light", "Arial", sans-serif;
     -webkit-writing-mode: vertical-lr;
         -ms-writing-mode: tb-lr;
@@ -910,8 +922,8 @@ img {
     position: absolute;
     width: 600px;
     height: 616px;
-    top: 183px;
-    left: 80px;
+    top: calc(100% -616px);
+    right: 50%;
     -webkit-box-shadow: 0 0 99px rgba(0, 0, 0, 0.1);
             box-shadow: 0 0 99px rgba(0, 0, 0, 0.1);
     background-image: -o-linear-gradient(64deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
@@ -925,10 +937,6 @@ img {
     margin: 0 auto;
     width: 1400px;
     padding: 0 20px;
-  }
-
-  main::before {
-    left: 120px;
   }
 }
 
